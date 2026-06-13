@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+import kaggle
 
 st.set_page_config(page_title="IPL Analysis Dashboard", page_icon="🏏", layout="wide")
 st.title("🏏 IPL Analysis Dashboard (2008-2024)")
@@ -10,8 +12,14 @@ st.write("Analysis of IPL matches and deliveries data")
 # Load data
 @st.cache_data
 def load_data():
-    matches = pd.read_csv(r"D:\python\projects\matches.csv")
-    deliveries = pd.read_csv(r"D:\python\projects\deliveries.csv")
+    if not os.path.exists("matches.csv"):
+        kaggle.api.authenticate()
+        kaggle.api.dataset_download_files(
+            "patrickb1912/ipl-complete-dataset-20082020",
+            unzip=True
+        )
+    matches = pd.read_csv("matches.csv")
+    deliveries = pd.read_csv("deliveries.csv")
     matches["city"] = matches["city"].fillna("Unknown")
     return matches, deliveries
 
