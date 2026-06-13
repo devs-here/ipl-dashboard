@@ -7,10 +7,12 @@ A data analysis dashboard analyzing IPL cricket data from 2008 to 2024.
 - Top 10 run scorers
 - Top 10 wicket takers
 - Toss decision analysis
-- Batting first vs fielding first wins
+- Player of the match awards
+- Total runs per season
 - Top venues
 - Runs vs boundaries scatter plot
-- Player of the match awards
+- Top 10 boundary hitters
+- Highest team total in a single innings
 - Team wins per season heatmap
 
 ## 🛠️ Built With
