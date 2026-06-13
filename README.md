@@ -24,3 +24,6 @@ A data analysis dashboard analyzing IPL cricket data from 2008 to 2024.
 
 ## 📁 Dataset
 IPL Complete Dataset from Kaggle (2008-2024)
+
+## 🚀 Live Demo
+https://ipl-dashboard-kxyp7dega797mbnwsv442q.streamlit.app/
